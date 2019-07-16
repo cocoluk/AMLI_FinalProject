@@ -6,10 +6,10 @@ import pandas as pd
 import numpy as np
 
 # Unique code from Twitter
-access_token = "443481916-E9R9G02yl4jtIZWFBO82t53Ga4Og7BE1OiHO7JL0"
-access_token_secret = "kkamhblBbwjD9U98fe5fKB7uwlEf47VfeAQeC5t3Mf8BR"
-consumer_key = "VW8tkb9etCH9Ud1qoEcpVVFH9"
-consumer_secret = "dp9tyEswI5mBzcqfgv2i9BSkP6OkKmZe0brhCOkruIFM7sxELM"
+access_token = "YOUR CODE"
+access_token_secret = "YOUR CODE"
+consumer_key = "YOUR CODE"
+consumer_secret = "YOUR CODE"
 
 # Boilerplate code here
 auth = tweepy.OAuthHandler(consumer_key,consumer_secret)
