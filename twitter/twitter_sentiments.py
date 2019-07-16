@@ -20,7 +20,7 @@ api = tweepy.API(auth)
 
 public_tweets = api.search('Bitcoin')
 
-f = open('twitter.csv', 'a')
+f = open('hi.csv', 'a')
 with f as scorefile:
 	scoreFileWriter = csv.writer(scorefile)
 	for tweet in public_tweets:
