@@ -6,10 +6,10 @@ import pandas as pd
 import numpy as np
 
 # Unique code from Twitter
-access_token = "YOUR CODE"
-access_token_secret = "YOUR CODE"
-consumer_key = "YOUR CODE"
-consumer_secret = "YOUR CODE"
+access_token = "443481916-E9R9G02yl4jtIZWFBO82t53Ga4Og7BE1OiHO7JL0"
+access_token_secret = "kkamhblBbwjD9U98fe5fKB7uwlEf47VfeAQeC5t3Mf8BR"
+consumer_key = "VW8tkb9etCH9Ud1qoEcpVVFH9"
+consumer_secret = "dp9tyEswI5mBzcqfgv2i9BSkP6OkKmZe0brhCOkruIFM7sxELM"
 
 # Boilerplate code here
 auth = tweepy.OAuthHandler(consumer_key,consumer_secret)
@@ -20,15 +20,19 @@ api = tweepy.API(auth)
 
 public_tweets = api.search('Bitcoin')
 
-f = open('hi.csv', 'a')
+f = open('live_twitter.csv', 'a')
 with f as scorefile:
 	scoreFileWriter = csv.writer(scorefile)
 	for tweet in public_tweets:
 		tweet_text = tweet.text
+		favorites = tweet.favorite_count
+		retweets = tweet.retweet_count
 		analysis = TextBlob(tweet.text)
 		analysis_sentiment = analysis.sentiment
+		analysis_polarity = analysis.polarity
+		analysis_subjectivity = analysis.subjectivity
 		current = str(datetime.datetime.today())
-		scoreFileWriter.writerow([tweet_text,analysis_sentiment,current])
+		scoreFileWriter.writerow([tweet_text,analysis_sentiment,favorites,retweets,current])
 
 
 
