@@ -1,5 +1,0 @@
-﻿exchanges,bitcoin_usd,ethereum_usd,litecoin_usd
-gemini_hourly,http://www.cryptodatadownload.com/cdd/Gemini_BTCUSD_d.csv,http://www.cryptodatadownload.com/cdd/Gemini_ETHUSD_d.csv,http://www.cryptodatadownload.com/cdd/Gemini_LTCUSD_d.csv
-coinbase_hourly,http://www.cryptodatadownload.com/cdd/Coinbase_BTCUSD_d.csv,http://www.cryptodatadownload.com/cdd/Coinbase_ETHUSD_d.csv,http://www.cryptodatadownload.com/cdd/Coinbase_LTCUSD_d.csv
-kraken_hourly,http://www.cryptodatadownload.com/cdd/Kraken_BTCUSD_d.csv,http://www.cryptodatadownload.com/cdd/Kraken_ETHUSD_d.csv,http://www.cryptodatadownload.com/cdd/Kraken_LTCUSD_d.csv
-bitfinex_hourly,http://www.cryptodatadownload.com/cdd/Bitfinex_BTCUSD_d.csv,http://www.cryptodatadownload.com/cdd/Bitfinex_ETHUSD_d.csv,http://www.cryptodatadownload.com/cdd/Bitfinex_LTCUSD_d.csv
