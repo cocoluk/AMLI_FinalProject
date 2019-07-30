@@ -1,6 +1,14 @@
 import time
 from selenium import webdriver
 
+# This Python script is to automate the web browser and 
+# download the 39 csv files from https://charts.bitcoin.com/btc/chart/
+# to save more time.
+
+# author: Lu Yu
+# version: 07/30/19
+
+# set the link and the desired features to be fetched
 url = "https://charts.bitcoin.com/btc/chart/"
 page = ["price", "market-cap", "money-supply", "chain-value-density",
         "price-volatility", "daily-transactions", "transaction-value", "total-transactions",
@@ -13,25 +21,25 @@ page = ["price", "market-cap", "money-supply", "chain-value-density",
         "velocity-quarter", "velocity-daily", "transaction-size", "output-volume",
         "output-value", "utxo-set-size", "utxo-growth"]
 
+# initiate the web browser
 profile = webdriver.FirefoxProfile()
 profile.set_preference("browser.download.folderList", 2)
 profile.set_preference("browser.download.manager.showWhenStarting", False)
-profile.set_preference("browser.download.dir", '/Users/luyu/Desktop/btc_data')
+
+# The file will be saved to a fold called bitcoin on the Desktop
+# NOTICE: need to change the file path using different computers
+profile.set_preference("browser.download.dir", '/Users/luyu/Desktop/bitcoin')
 profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "text/csv")
 
 driver = webdriver.Firefox(firefox_profile=profile)
 
-
+# walk through each page
 for i in range(len(page)):
     driver.get(url+page[i])
     time.sleep(2)
-    driver.find_element_by_id("sidebar-tools-btn").click()
+    driver.find_element_by_id("sidebar-tools-btn").click() # click sidebar
     time.sleep(2)
-    driver.find_element_by_id("data-download").click()
+    driver.find_element_by_id("data-download").click() # click download
     time.sleep(3)
-
-
-
-# TODO: UPLOAD THE SAVED FILE ON DROPBOX???
 
 driver.quit()
