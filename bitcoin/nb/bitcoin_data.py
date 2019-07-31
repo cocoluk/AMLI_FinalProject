@@ -27,8 +27,8 @@ profile.set_preference("browser.download.folderList", 2)
 profile.set_preference("browser.download.manager.showWhenStarting", False)
 
 # The file will be saved to a fold called bitcoin on the Desktop
-# NOTICE: need to change the file path using different computers
-profile.set_preference("browser.download.dir", '/Users/luyu/Desktop/bitcoin')
+# NOTICE: may need to change the file path using different computers
+profile.set_preference("browser.download.dir", '../data/bitcoin_data')
 profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "text/csv")
 
 driver = webdriver.Firefox(firefox_profile=profile)
