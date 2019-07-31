@@ -65,7 +65,7 @@ To get historical Twitter data, you simply have to install the package through y
 - **Export Data**
 GetOldTweets3 exports tweets to a specified csv file called `output_got.csv` by default.
 
-- **Query Examples**  
+- **Query Examples**    
 Example 1 - Get tweets by query search:  
 `GetOldTweets3 --querysearch "europe refugees" --maxtweets 10`  
 
