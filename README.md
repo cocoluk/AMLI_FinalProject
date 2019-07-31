@@ -88,7 +88,13 @@ See [GetOldTweets3](https://pypi.org/project/GetOldTweets3/) for additional Twit
 
 ## Model
 ## Results
-## Future Directions
+## Future Steps
+### More Data Scraping  
+Our time limitations posed the greatest constraint, as the most crucial part of this idea is to get as much relevant data related to cryptocurrency and Bitcoin as possible. This is needed for our model to be trained on a holistic and realistic depiction of what posts, articles, etc. people are reacting to in order to accurately gauge public sentiment. If we had more time and perhaps more people, we could perform a wider and deeper search for this data to improve our model.  
+### Financial Sentiment Analyzer
+We attempted to search for a better sentiment analyzer since TextBlob’s performance was less than ideal. We wanted to find one that specifically dealt with financial text, but were unable to find such a tool. This is probably because an actual robust financial text sentiment analyzer would likely be privatized by FinTech organizations due to its potentially powerful capabilities. Going forward, an additional component of this project could be training our own financial text sentiment analyzer and furthering the open source agenda of our application. 
+
+
 
 
 ## Authors
