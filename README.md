@@ -66,30 +66,21 @@ To get historical Twitter data, you simply have to install the package through y
 GetOldTweets3 exports tweets to a specified csv file called `output_got.csv` by default.
 
 - **Query Examples**  
-Example 1 - Get tweets by query search:
-```
-GetOldTweets3 --querysearch "europe refugees" --maxtweets 10
-```
+Example 1 - Get tweets by query search:  
+`GetOldTweets3 --querysearch "europe refugees" --maxtweets 10`  
 
-Example 2 - Get the last 10 top tweets by username:
-```
-GetOldTweets3 --username "barackobama" --toptweets --maxtweets 10
-```
+Example 2 - Get the last 10 top tweets by username:  
+`GetOldTweets3 --username "barackobama" --toptweets --maxtweets 10`  
 
-Example 3 - Get tweets by the username and bound dates (until date is not included):
-```
-GetOldTweets3 --username "barackobama" --since 2015-09-10 --until 2015-09-12 --maxtweets 10
-```
+Example 3 - Get tweets by the username and bound dates (until date is not included):  
+`GetOldTweets3 --username "barackobama" --since 2015-09-10 --until 2015-09-12 --maxtweets 10`  
 
-Example 4 - Get tweets by several usernames:
-```
-GetOldTweets3 --username "BarackObama,AngelaMerkeICDU" --usernames-from-file userlist.txt --maxtweets 10
-```
+Example 4 - Get tweets by several usernames:  
+`GetOldTweets3 --username "BarackObama,AngelaMerkeICDU" --usernames-from-file userlist.txt --maxtweets 10`  
 
-Example 5 - Get tweets by language:
-```
-GetOldTweets3 --querysearch "bitcoin" --lang cn --maxtweets 10
-```
+Example 5 - Get tweets by language:  
+`GetOldTweets3 --querysearch "bitcoin" --lang cn --maxtweets 10`  
+
 See [GetOldTweets3](https://pypi.org/project/GetOldTweets3/) for additional Twitter criteria.
 
 ### Reddit
