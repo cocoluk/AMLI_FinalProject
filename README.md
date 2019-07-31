@@ -92,17 +92,10 @@ See [GetOldTweets3](https://pypi.org/project/GetOldTweets3/) for additional Twit
 
 
 ## Authors
-<<<<<<< HEAD
 * **[Anthony Burred](https://www.instagram.com/anthonyburre/)**
 * **[Courtney Luk](https://www.linkedin.com/in/courtneyluk/)**
 * **[Lu Yu](https://www.linkedin.com/in/yu24l/)**
 * **[Max Matuska](https://www.linkedin.com/in/max-matuska-4b736014a/)**
-=======
-* **Anthony Burre**  - [LinkedIn](https://www.linkedin.com/in/anthony-burre-ab44a1123/)
-* **Courtney Luk**  - [LinkedIn](https://www.linkedin.com/in/courtneyluk/)
-* **Lu Yu**  - [LinkedIn](https://www.linkedin.com/in/yu24l/)
-* **Max Matuska**  - [LinkedIn](https://www.linkedin.com/in/max-matuska-4b736014a/)
->>>>>>> 5e1ce598eadd3157875f3784618212d6f868550b
 
 ## Acknowledgments
 
