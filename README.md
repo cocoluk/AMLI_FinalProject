@@ -1,88 +1,79 @@
-# AMLI project - Bitcoin Price Prediction
 
-This is a final project from Google Applied Machine Learning Intensive (AMLI) in summer 2019. Given the Bitcoin historical data with other features and sentiment analysis of relevant Reddit and Twitter posts, the RNN model could predict the trend and the exact price of Bitcoin.
+# AMLI Project - Bitcoin Price Prediction
+
+ > This is a final project from Google Applied Machine Learning Intensive (AMLI) in summer 2019. 
+
+ > Using machine learning (ML) techniques and given the Bitcoin historical data and sentiment analysis of relevant Reddit and Twitter posts, the model could predict the trend and the exact price of Bitcoin.
+
+ > Keywords: applied machine learning, Bitcoin, cryptocurrency, price prediction, RNN, sentiment analysis
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Features](#features)
+- [Contributing](#contributing)
+- [Team](#team)
+- [FAQ](#faq)
+- [Support](#support)
+- [License](#license)
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Code is intended to work with Python 3.6.x and Jupyter Notebook, or Google Colaboratory.
 
 ### Prerequisites
-
-What things you need to install the software and how to install them
-
+You need to download the packages needed for the code. Here is the way to download it:
 ```
-Give examples
+pip install <package>
 ```
 
-### Installing
+### Structures
+There are four folders: `bitcoin`, `model`, `reddit`, and `twitter`. In each folder, the structure is as follow:
 
-A step by step series of examples that tell you how to get a development env running
+    ├── folder name                   
+    |   ├── bin         # script files (ended with .py)
+    |   ├── data             # dataset (ended with .csv or .xlsx)
+    |   └── nb               # Jupyter Notebook (ended iwth .ipynb)
 
-Say what the step will be
+## Model Inputs
+The model inputs come from three sources: Bitcoin historical data, sentiment analysis of Tweets, and sentiment analysis of Reddit posts.
 
-```
-Give the example
-```
+### Bitcoin Historical Data
+- **Download latest historical data**
+To get the latest data for Bitcoin price and other features, you could go to [Bitcoin Core Charts](https://charts.bitcoin.com/btc/) and manually download the 39 files. Here is how to download them:
+![Recordit GIF](http://g.recordit.co/61NpgDWg5I.gif)
 
-And repeat
+An alternative way would be automating the web browser and download them. To do this, you need Selenium and corresponding web browser. The project uses Firefox version 40.0.3.
+After successfully downloading them, you can run `bitcoin_data.py` in `bitcoin/bin`. It will download 39 files about Bitcoin price to `bitcoin/data/bitcoin_data`.
 
-```
-until finished
-```
+- **Use existing dataset**
+In the `bitcoin/data/bitcoin_data` folder, there are 39 files ended with `.csv`. The latest data is July 29, 2019.
 
-End with an example of getting some data out of the system or using it for a little demo
+- **Merge data into one file**
+Run `Merge_Data.ipynb` in `bitcoin/nb`, and it will generate a excel file called `bitcoin_merged.xlsx` in  `bitcoin/data`.
 
-## Running the tests
+- Optional
+If you are also interested in feeding the historical price of Litecoin or Ethereum to the model, you can run the corresponding code blocks in `Merge_Data.ipynb` and get `litecoin_data.csv` and `ethereum_data.csv` .
 
-Explain how to run the automated tests for this system
+### Twitter
+### Reddit
+### Sentiment Analysis
 
-### Break down into end to end tests
+## Model
+## Results
+## Future Directions
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* **Anthony Burre**  - [LinkedIn](https://www.instagram.com/anthonyburre/)
+* **Courtney**  - [LinkedIn](https://www.linkedin.com/in/courtneyluk/)
+* **Lu Yu**  - [LinkedIn](https://www.linkedin.com/in/yu24l/)
+* **Max Matuska**  - [LinkedIn](https://www.linkedin.com/in/max-matuska-4b736014a/)
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
+* Thank 
+* 
+## References
+*
+*
