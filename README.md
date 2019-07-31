@@ -56,6 +56,41 @@ Run `Merge_Data.ipynb` in `bitcoin/nb`, and it will generate a excel file called
 If you are also interested in feeding the historical price of Litecoin or Ethereum to the model, you can run the corresponding code blocks in `Merge_Data.ipynb` and get `litecoin_data.csv` and `ethereum_data.csv` .
 
 ### Twitter
+- **GetOldTweets3** 
+This is an improvement fork of another project GetOldTweets. [GetOldTweets](https://github.com/Jefferson-Henrique/GetOldTweets-python) is a tweet scraping package that bypasses Twitter's offical API's general limitations especially when it comes to time constraints. [GetOldTweets3](https://pypi.org/project/GetOldTweets3/) fixes minor known issues with the original module, provides additional features such as number of retweets, and outputs the data as a csv more cleanly.
+
+- **Installation**
+To get historical Twitter data, you simply have to install the package through your local machine's command line: `pip install GetOldTweets3`
+
+- **Export Data**
+GetOldTweets3 exports tweets to a specified csv file called `output_got.csv` by default.
+
+- **Query Examples**
+Example 1 - Get tweets by query search:
+```
+GetOldTweets3 --querysearch "europe refugees" --maxtweets 10
+```
+
+Example 2 - Get the last 10 top tweets by username:
+```
+GetOldTweets3 --username "barackobama" --toptweets --maxtweets 10
+```
+
+Example 3 - Get tweets by the username and bound dates (until date is not included):
+```
+GetOldTweets3 --username "barackobama" --since 2015-09-10 --until 2015-09-12 --maxtweets 10
+```
+
+Example 4 - Get tweets by several usernames:
+```
+GetOldTweets3 --username "BarackObama,AngelaMerkeICDU" --usernames-from-file userlist.txt --maxtweets 10
+```
+
+Example 5 - Get tweets by language:
+```
+GetOldTweets3 --querysearch "bitcoin" --lang cn --maxtweets 10
+```
+
 ### Reddit
 ### Sentiment Analysis
 
@@ -66,7 +101,7 @@ If you are also interested in feeding the historical price of Litecoin or Ethere
 
 ## Authors
 * **Anthony Burre**  - [LinkedIn](https://www.instagram.com/anthonyburre/)
-* **Courtney**  - [LinkedIn](https://www.linkedin.com/in/courtneyluk/)
+* **Courtney Luk**  - [LinkedIn](https://www.linkedin.com/in/courtneyluk/)
 * **Lu Yu**  - [LinkedIn](https://www.linkedin.com/in/yu24l/)
 * **Max Matuska**  - [LinkedIn](https://www.linkedin.com/in/max-matuska-4b736014a/)
 
