@@ -84,6 +84,23 @@ Example 5 - Get tweets by language:
 See [GetOldTweets3](https://pypi.org/project/GetOldTweets3/) for additional Twitter criteria.
 
 ### Reddit
+- **scrape_reddit**
+This script utilizes the pushshift.io API to acquire reddit submissions mentioning the term 'cryptocurrency' between specified time periods. Because this API returns a maximum of 500 results for any query, one must step back through time in small increments in order not to miss any posts. To speed this process up, the script uses a dynamic time stepping scheme, adapting the time interval queried as needed. We found that an interval initialized at 24 hours and a divisor of 2 works decently fast. One should set the iterations variable according to the desired start date of scraping. Sometimes the api returns an error instead of a json file, and the urls that are not successfully processed are logged in the 'error_log' variable. This was an uncommon occurance.
+
+The output of this script is a very large file named `reddit.csv`.
+
+- **analyze_reddit_sentiment**
+This script takes the `reddit.csv` file as input, and performs sentiment analysis on both title and body fields, creating new columns for body and title polarity and subjectivity values. It then outputs this information as `reddit_sent.csv`.
+
+- **aggregate_reddit_daily**
+This script takes as input the `reddit_sent.csv` file and generates a vector aggregating the total sentiment of reddit for each day by taking into account number of posts, polarity/subjectivity of each post, score of each post, and number of comments on each post. The output of this script is `reddit_dailyscores.csv`.
+
+- **normalize_reddit**
+This script takes the `reddit_dailyscores.csv` file as input, and normalizes its values using a MinMaxScaler to map them all to values between zero and one. It then spreads out these values with the np.power function, as they tend to be skewed right significantly. It generates the `reddit_daily_normalized.csv` file as output. 
+
+### News
+- **see above**
+We used the reddit api to acquire news headlines mentioning Bitcoin, as news specific apis either did not reach far enough back in time or did not return a comprehensive set of articles. In the reddit/nb/news directory are scripts mirroring the reddit scripts above, but which deal with our news data. 
 ### Sentiment Analysis
 
 ## Model
