@@ -120,7 +120,7 @@ Open `Bitcoin_Price_Prediction.ipynb` in `model/nb` and follow the instructions 
 ### Echo State Network (ESN)
 ESN is a type of RNN, and it is well adapted for handling chaotic time series. It has a sparsely connected hidden layer (with typically 1% connectivity). The connectivity and weights of hidden [neurons](https://en.wikipedia.org/wiki/Artificial_neuron "Artificial neuron") are fixed and randomly assigned. The weights of output neurons can be learned so that the network can (re)produce specific temporal patterns. (Source: [WIkipedia](https://en.wikipedia.org/wiki/Echo_state_network))
 
-Open `Echo_State_Network.ipynb` in `model/nb` and follow the instructions to run the model.
+Use [Google Colaboratory](https://colab.research.google.com/) to open `Echo_State_Network.ipynb` in `model/nb` and follow the instructions to run the model.
 ## Results
 ### RNN model
 |Feature Set|Precision                        |Recall |Accuracy                        |
