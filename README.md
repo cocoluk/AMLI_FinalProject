@@ -1,7 +1,6 @@
 # AMLI Project - Bitcoin Price Prediction
 
-This is our team's final project from Google's Applied Machine Learning Intensive (AMLI), a 10-week ML bootcamp that took place during the summer of 2019.  
-Using machine learning (ML) techniques learned throughout the program, we built a model that used historical Bitcoin pricing data and sentiment analysis of relevant historical Reddit and Twitter data to predict the trend and the exact future price of Bitcoin.
+This is our team's final project from Google's Applied Machine Learning Intensive (AMLI), a 10-week ML bootcamp that took place during the summer of 2019. Using machine learning (ML) techniques learned throughout the program, we built a model that used historical Bitcoin pricing data and sentiment analysis of relevant historical Reddit and Twitter data to predict the trend and the exact future price of Bitcoin.
 
  > Keywords: applied machine learning, Bitcoin, cryptocurrency, price prediction, RNN, sentiment analysis
 
