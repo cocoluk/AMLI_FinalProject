@@ -1,4 +1,5 @@
 
+
 # AMLI Project - Bitcoin Price Prediction
 
  > This is a final project from Google Applied Machine Learning Intensive (AMLI) in summer 2019. 
@@ -87,6 +88,8 @@ See [GetOldTweets3](https://pypi.org/project/GetOldTweets3/) for additional Twit
 ### Sentiment Analysis
 
 ## Model
+### Recurrent Neural Network (RNN) 
+### Echo State Network (ESN)
 ## Results
 ## Future Steps
 ### More Data Scraping  
@@ -94,19 +97,16 @@ Our time limitations posed the greatest constraint, as the most crucial part of 
 ### Financial Sentiment Analyzer
 We attempted to search for a better sentiment analyzer since TextBlob’s performance was less than ideal. We wanted to find one that specifically dealt with financial text, but were unable to find such a tool. This is probably because an actual robust financial text sentiment analyzer would likely be privatized by FinTech organizations due to its potentially powerful capabilities. Going forward, an additional component of this project could be training our own financial text sentiment analyzer and furthering the open source agenda of our application. 
 
-
-
-
 ## Authors
-* **[Anthony Burre](https://www.instagram.com/anthonyburre/)**
+* **[Anthony Burre](https://www.linkedin.com/in/anthony-burre-ab44a1123/)**
 * **[Courtney Luk](https://www.linkedin.com/in/courtneyluk/)**
 * **[Lu Yu](https://www.linkedin.com/in/yu24l/)**
 * **[Max Matuska](https://www.linkedin.com/in/max-matuska-4b736014a/)**
 
 ## Acknowledgments
 
-* Thank 
-* 
+* We would like to express our special thanks of gratitude to the instructors team from AMLI who provided much help and support for this project, as well as Sidnie and Liza who gave us this great opportunity.
+
 ## References
-*
-*
+* [Predicting Stock Prices with Echo State Networks](https://towardsdatascience.com/predicting-stock-prices-with-echo-state-networks-f910809d23d4)
+* [Predicting Cryptocurrency Prices with Machine Learning](https://medium.com/datadriveninvestor/predicting-cryptocurrency-prices-with-machine-learning-1b5a711d3937)
