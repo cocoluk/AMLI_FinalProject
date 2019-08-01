@@ -119,7 +119,7 @@ We attempted to search for a better sentiment analyzer since TextBlob’s perfor
 
 ## Acknowledgments
 
-* We would like to express our special thanks of gratitude to the instructors team from AMLI who provided much help and support for this project, as well as Sidnie and Liza who gave us this great opportunity.
+* We would like to express our gratitude to the AMLI instructor team that provided much help and support for this project, as well as Sidnie and Liza who organized this great opportunity.
 
 ## References
 * [Predicting Stock Prices with Echo State Networks](https://towardsdatascience.com/predicting-stock-prices-with-echo-state-networks-f910809d23d4)
