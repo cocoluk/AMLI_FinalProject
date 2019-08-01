@@ -117,9 +117,9 @@ We attempted to search for a better sentiment analyzer since TextBlob’s perfor
 * **[Lu Yu](https://www.linkedin.com/in/yu24l/)**
 * **[Max Matuska](https://www.linkedin.com/in/max-matuska-4b736014a/)**
 
-## Acknowledgments
+## Acknowledgments  
 
-* We would like to express our gratitude to the AMLI instructor team that provided so much help and support on this project, as well as Sidnie and Liza who organized this great opportunity.
+We would like to express our gratitude to the AMLI instructor team that provided so much help and support on this project, as well as Sidnie and Liza who organized this great opportunity.
 
 ## References
 * [Predicting Stock Prices with Echo State Networks](https://towardsdatascience.com/predicting-stock-prices-with-echo-state-networks-f910809d23d4)
