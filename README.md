@@ -1,5 +1,3 @@
-
-
 # AMLI Project - Bitcoin Price Prediction
 
  > This is a final project from Google Applied Machine Learning Intensive (AMLI) in summer 2019. 
@@ -11,12 +9,13 @@
 ## Table of Contents
 
 - [Getting Started](#getting-started)
-- [Features](#features)
-- [Contributing](#contributing)
-- [Team](#team)
-- [FAQ](#faq)
-- [Support](#support)
-- [License](#license)
+- [Model Inputs](#model-inputs)
+- [Model](#model)
+- [Results](#results)
+- [Future Steps](#future-steps)
+- [Authors](#authors)
+- [Acknowledgments](#acknowledgments)
+- [References](#references)
 
 ## Getting Started
 
@@ -89,8 +88,23 @@ See [GetOldTweets3](https://pypi.org/project/GetOldTweets3/) for additional Twit
 
 ## Model
 ### Recurrent Neural Network (RNN) 
+Open `Bitcoin_Price_Prediction.ipynb` in `model/nb` and follow the instructions to run the model.
+
 ### Echo State Network (ESN)
+ESN is a type of RNN, and it is well adapted for handling chaotic time series. It has a sparsely connected hidden layer (with typically 1% connectivity). The connectivity and weights of hidden [neurons](https://en.wikipedia.org/wiki/Artificial_neuron "Artificial neuron") are fixed and randomly assigned. The weights of output neurons can be learned so that the network can (re)produce specific temporal patterns. (Source: [WIkipedia](https://en.wikipedia.org/wiki/Echo_state_network))
+
+Open `Echo_State_Network.ipynb` in `model/nb` and follow the instructions to run the model.
 ## Results
+### RNN model
+|Feature Set|Precision                        |Recall |Accuracy                        |
+|----------------|-------------------------------|-----------------------------|-------|
+|first|1           |2          |3
+|second          |4      |5          |6
+|third          |7      |8          |9
+
+### ESN model
+In the `Echo_State_Network.ipynb` notebook, we tried several different combinations of the parameters. Using the scaled Bitcoin price data, an optimal set of `reservoir = 500`, `sparsity = 0.2`, `radius = 1.5`, and `noise = 0.001` gives the MSE around `0.1547`.
+
 ## Future Steps
 ### More Data Scraping  
 Our time limitations posed the greatest constraint, as the most crucial part of this idea is to get as much relevant data related to cryptocurrency and Bitcoin as possible. This is needed for our model to be trained on a holistic and realistic depiction of what posts, articles, etc. people are reacting to in order to accurately gauge public sentiment. If we had more time and perhaps more people, we could perform a wider and deeper search for this data to improve our model.  
