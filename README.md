@@ -1,8 +1,6 @@
 # AMLI Project - Bitcoin Price Prediction
 
- > This is a final project from Google Applied Machine Learning Intensive (AMLI) in summer 2019. 
-
- > Using machine learning (ML) techniques and given the Bitcoin historical data and sentiment analysis of relevant Reddit and Twitter posts, the model could predict the trend and the exact price of Bitcoin.
+This is our team's final project from Google's Applied Machine Learning Intensive (AMLI), a 10-week ML bootcamp that took place during the summer of 2019. Using machine learning (ML) techniques learned throughout the program, we built a model that used historical Bitcoin pricing data and sentiment analysis of relevant historical Reddit and Twitter data to predict the trend and the exact future price of Bitcoin.
 
  > Keywords: applied machine learning, Bitcoin, cryptocurrency, price prediction, RNN, sentiment analysis
 
@@ -66,6 +64,7 @@ To get historical Twitter data, you simply have to install the package through y
 GetOldTweets3 exports tweets to a specified csv file called `output_got.csv` by default.
 
 - **Query Examples**    
+
 Example 1 - Get tweets by query search:  
 `GetOldTweets3 --querysearch "europe refugees" --maxtweets 10`  
 
@@ -120,7 +119,7 @@ Open `Echo_State_Network.ipynb` in `model/nb` and follow the instructions to run
 |third          |7      |8          |9
 
 ### ESN model
-In the `Echo_State_Network.ipynb` notebook, we tried several different combinations of the parameters. Using the scaled Bitcoin price data, an optimal set of `reservoir = 500`, `sparsity = 0.2`, `radius = 1.5`, and `noise = 0.001` gives the MSE around `0.1547`.
+In the `Echo_State_Network.ipynb` notebook, we tried several different combinations of the parameters. Using the scaled Bitcoin price data, an optimal set of `reservoir = 500`, `sparsity = 0.2`, `radius = 1.5`, and `noise = 0.001` gives the F1 score around `0.65` and accuracy around 0.61.
 
 ## Future Steps
 ### More Data Scraping  
@@ -134,10 +133,11 @@ We attempted to search for a better sentiment analyzer since TextBlob’s perfor
 * **[Lu Yu](https://www.linkedin.com/in/yu24l/)**
 * **[Max Matuska](https://www.linkedin.com/in/max-matuska-4b736014a/)**
 
-## Acknowledgments
+## Acknowledgments  
 
-* We would like to express our special thanks of gratitude to the instructors team from AMLI who provided much help and support for this project, as well as Sidnie and Liza who gave us this great opportunity.
+We would like to express our gratitude to the AMLI instructor team that provided so much help and support on this project, as well as Sidnie and Liza who organized this great opportunity.
 
 ## References
 * [Predicting Stock Prices with Echo State Networks](https://towardsdatascience.com/predicting-stock-prices-with-echo-state-networks-f910809d23d4)
 * [Predicting Cryptocurrency Prices with Machine Learning](https://medium.com/datadriveninvestor/predicting-cryptocurrency-prices-with-machine-learning-1b5a711d3937)
+* [How Cryptocurrency Prices Work, Explained](https://cointelegraph.com/explained/how-cryptocurrency-prices-work-explained)
