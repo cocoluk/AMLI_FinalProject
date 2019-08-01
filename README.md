@@ -64,6 +64,7 @@ To get historical Twitter data, you simply have to install the package through y
 GetOldTweets3 exports tweets to a specified csv file called `output_got.csv` by default.
 
 - **Query Examples**    
+
 Example 1 - Get tweets by query search:  
 `GetOldTweets3 --querysearch "europe refugees" --maxtweets 10`  
 
@@ -101,7 +102,7 @@ Open `Echo_State_Network.ipynb` in `model/nb` and follow the instructions to run
 |third          |7      |8          |9
 
 ### ESN model
-In the `Echo_State_Network.ipynb` notebook, we tried several different combinations of the parameters. Using the scaled Bitcoin price data, an optimal set of `reservoir = 500`, `sparsity = 0.2`, `radius = 1.5`, and `noise = 0.001` gives the MSE around `0.1547`.
+In the `Echo_State_Network.ipynb` notebook, we tried several different combinations of the parameters. Using the scaled Bitcoin price data, an optimal set of `reservoir = 500`, `sparsity = 0.2`, `radius = 1.5`, and `noise = 0.001` gives the F1 score around `0.65` and accuracy around 0.61.
 
 ## Future Steps
 ### More Data Scraping  
