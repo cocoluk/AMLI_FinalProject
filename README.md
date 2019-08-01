@@ -50,7 +50,7 @@ In the `bitcoin/data/bitcoin_data` folder, there are 39 files ended with `.csv`.
 - **Merge data into one file**
 Run `Merge_Data.ipynb` in `bitcoin/nb`, and it will generate a excel file called `bitcoin_merged.xlsx` in  `bitcoin/data`.
 
-- Optional
+- Optional: 
 If you are also interested in feeding the historical price of Litecoin or Ethereum to the model, you can run the corresponding code blocks in `Merge_Data.ipynb` and get `litecoin_data.csv` and `ethereum_data.csv` .
 
 ### Twitter
