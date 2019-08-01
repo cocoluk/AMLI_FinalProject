@@ -64,6 +64,7 @@ To get historical Twitter data, you simply have to install the package through y
 GetOldTweets3 exports tweets to a specified csv file called `output_got.csv` by default.
 
 - **Query Examples**    
+
 Example 1 - Get tweets by query search:  
 `GetOldTweets3 --querysearch "europe refugees" --maxtweets 10`  
 
@@ -82,7 +83,25 @@ Example 5 - Get tweets by language:
 See [GetOldTweets3](https://pypi.org/project/GetOldTweets3/) for additional Twitter criteria, query examples, and documentation.
 
 ### Reddit
+- **scrape_reddit**
+This script utilizes the pushshift.io API to acquire reddit submissions mentioning the term 'cryptocurrency' between specified time periods. Because this API returns a maximum of 500 results for any query, one must step back through time in small increments in order not to miss any posts. To speed this process up, the script uses a dynamic time stepping scheme, adapting the time interval queried as needed. We found that an interval initialized at 24 hours and a divisor of 2 works decently fast. One should set the iterations variable according to the desired start date of scraping. Sometimes the api returns an error instead of a json file, and the urls that are not successfully processed are logged in the 'error_log' variable. This was an uncommon occurance.
+
+The output of this script is a very large file named `reddit.csv`.
+
+- **analyze_reddit_sentiment**
+This script takes the `reddit.csv` file as input, and performs sentiment analysis on both title and body fields, creating new columns for body and title polarity and subjectivity values. It then outputs this information as `reddit_sent.csv`.
+
+- **aggregate_reddit_daily**
+This script takes as input the `reddit_sent.csv` file and generates a vector aggregating the total sentiment of reddit for each day by taking into account number of posts, polarity/subjectivity of each post, score of each post, and number of comments on each post. The output of this script is `reddit_dailyscores.csv`.
+
+- **normalize_reddit**
+This script takes the `reddit_dailyscores.csv` file as input, and normalizes its values using a MinMaxScaler to map them all to values between zero and one. It then spreads out these values with the np.power function, as they tend to be skewed right significantly. It generates the `reddit_daily_normalized.csv` file as output. 
+
+### News
+- **see above**
+We used the reddit api to acquire news headlines mentioning Bitcoin, as news specific apis either did not reach far enough back in time or did not return a comprehensive set of articles. In the reddit/nb/news directory are scripts mirroring the reddit scripts above, but which deal with our news data. 
 ### Sentiment Analysis
+For the sentiment analysis we utilized both TextBlob’s PatternAnalyzer and a basic sklearn sentiment analyzer that was trained on our custom data. TextBlob’s PatternAnalyzier only requires the installation of TextBlob. To do this use: `pip install TextBlob` making sure to install this package into the environment where the notebook files will be opened. TextBlob's PatternAnalyzier returns mediocre results as it wasn’t trained on financial text data. In atempts to mitogate this issue we tried an alternative method of sentiment analysis using sklearn. To use this custom sentiment analyzer you must first use the command `pip scikit-learn`. Open the **analyze_reddit_sentiment.ipynb** notebook file. Read in the change in price CSV and a range of data from several days both Reddit and Twitter. Use the code within the notebook to combine the three CSVs (merging on the datetime column). This cell should also convert the text and labels to two lists. Use the next cell to vectorize the text data and run the model. If you’re happy with the accuracy score printed out on the bottomn of the cell - use model.predict(vectorized text data) on the rest of the text data. The next cell in this notebook will iterate through a csv with text data and add a column with the analysis and return a CSV which can be used in the model.  
 
 ## Model
 ### Recurrent Neural Network (RNN) 
@@ -101,7 +120,7 @@ Open `Echo_State_Network.ipynb` in `model/nb` and follow the instructions to run
 |third          |7      |8          |9
 
 ### ESN model
-In the `Echo_State_Network.ipynb` notebook, we tried several different combinations of the parameters. Using the scaled Bitcoin price data, an optimal set of `reservoir = 500`, `sparsity = 0.2`, `radius = 1.5`, and `noise = 0.001` gives the MSE around `0.1547`.
+In the `Echo_State_Network.ipynb` notebook, we tried several different combinations of the parameters. Using the scaled Bitcoin price data, an optimal set of `reservoir = 500`, `sparsity = 0.2`, `radius = 1.5`, and `noise = 0.001` gives the F1 score around `0.65` and accuracy around 0.61.
 
 ## Future Steps
 ### More Data Scraping  
