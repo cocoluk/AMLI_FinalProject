@@ -1,6 +1,6 @@
-# AMLI Final Project: Bitcoin Price Prediction
+# AMLI Project - Bitcoin Price Prediction
 
-This is our team's final project from Google's Applied Machine Learning Intensive (AMLI), a 10-week ML bootcamp that took place during the summer of 2019. Using machine learning (ML) techniques learned throughout the program, we built a model that predicts the trend and the future Bitcoin prices using historical Bitcoin pricing data and sentiment analysis of relevant historical Reddit and Twitter posts.
+This is our team's final project from Google's Applied Machine Learning Intensive (AMLI), a 10-week ML bootcamp that took place during the summer of 2019. Using machine learning (ML) techniques learned throughout the program, we built a model that used historical Bitcoin pricing data and sentiment analysis of relevant historical Reddit and Twitter data to predict the trend and the exact future price of Bitcoin.
 
  > Keywords: applied machine learning, Bitcoin, cryptocurrency, price prediction, RNN, sentiment analysis
 
@@ -80,7 +80,7 @@ Example 4 - Get tweets by several usernames:
 Example 5 - Get tweets by language:  
 `GetOldTweets3 --querysearch "bitcoin" --lang cn --maxtweets 10`  
 
-See [GetOldTweets3](https://pypi.org/project/GetOldTweets3/) for additional Twitter criteria, query examples, and documentation.
+See [GetOldTweets3](https://pypi.org/project/GetOldTweets3/) for additional Twitter criteria.
 
 ### Reddit
 - **scrape_reddit**
@@ -101,7 +101,7 @@ This script takes the `reddit_dailyscores.csv` file as input, and normalizes its
 - **see above**
 We used the reddit api to acquire news headlines mentioning Bitcoin, as news specific apis either did not reach far enough back in time or did not return a comprehensive set of articles. In the reddit/nb/news directory are scripts mirroring the reddit scripts above, but which deal with our news data. 
 ### Sentiment Analysis
-For the sentiment analysis we utilized both TextBlob’s PatternAnalyzer and a basic sklearn sentiment analyzer that was trained on our custom data. TextBlob’s PatternAnalyzier only requires the installation of TextBlob. To do this use: `pip install TextBlob` making sure to install this package into the environment where the notebook files will be opened. TextBlob's PatternAnalyzier returns mediocre results as it wasn’t trained on financial text data. In atempts to mitogate this issue we tried an alternative method of sentiment analysis using sklearn. To use this custom sentiment analyzer you must first use the command `pip scikit-learn`. Open the **analyze_reddit_sentiment.ipynb** notebook file. Read in the ***bitcoin_price_change.csv*** and a range of data from several different days from both Reddit and Twitter. Use the code within the notebook to combine the three CSVs (merging on the datetime column). This cell should also convert the text and labels to two lists. Use the next cell to vectorize the text data and run the model. If you’re happy with the accuracy score printed out on the bottomn of the cell - use model.predict(vectorized text data) on the rest of the text data. The next cell in this notebook will iterate through a csv with text data and add a column with the analysis and return a CSV which can be used in the model.  
+For the sentiment analysis we utilized both TextBlob’s PatternAnalyzer and a basic sklearn sentiment analyzer that was trained on our custom data. TextBlob’s PatternAnalyzier only requires the installation of TextBlob. To do this use: `pip install TextBlob` making sure to install this package into the environment where the notebook files will be opened. TextBlob's PatternAnalyzier returns mediocre results as it wasn’t trained on financial text data. In atempts to mitogate this issue we tried an alternative method of sentiment analysis using sklearn. To use this custom sentiment analyzer you must first use the command `pip scikit-learn`. Open the **analyze_reddit_sentiment.ipynb** notebook file found in the **reddit/nb** directory. Read in the ***bitcoin_price_change.csv*** and a range of data from several different days from both Reddit and Twitter. Use the code within the notebook to combine the three CSVs (merging on the datetime column). This cell should also convert the text and labels to two lists. Use the next cell to vectorize the text data and run the model. If you’re happy with the accuracy score printed out on the bottomn of the cell - use model.predict(vectorized text data) on the rest of the text data. The next cell in this notebook will iterate through a csv with text data and add a column with the analysis and return a CSV which can be used in the model.  
 
 ## Model
 ### Recurrent Neural Network (RNN) 
@@ -136,7 +136,7 @@ We attempted to search for a better sentiment analyzer since TextBlob’s perfor
 
 ## Acknowledgments  
 
-We would like to express our gratitude to the AMLI instructor team that provided so much help and support on this project as well as Sidnie and Liza, our program mangagers who organized this great opportunity.
+We would like to express our gratitude to the AMLI instructor team that provided so much help and support on this project, as well as Sidnie and Liza who organized this great opportunity.
 
 ## References
 * [Predicting Stock Prices with Echo State Networks](https://towardsdatascience.com/predicting-stock-prices-with-echo-state-networks-f910809d23d4)
