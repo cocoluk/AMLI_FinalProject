@@ -1,6 +1,6 @@
-# AMLI Project - Bitcoin Price Prediction
+# AMLI Final Project: Bitcoin Price Prediction
 
-This is our team's final project from Google's Applied Machine Learning Intensive (AMLI), a 10-week ML bootcamp that took place during the summer of 2019. Using machine learning (ML) techniques learned throughout the program, we built a model that used historical Bitcoin pricing data and sentiment analysis of relevant historical Reddit and Twitter data to predict the trend and the exact future price of Bitcoin.
+This is our team's final project from Google's Applied Machine Learning Intensive (AMLI), a 10-week ML bootcamp that took place during the summer of 2019. Using machine learning (ML) techniques learned throughout the program, we built a model that predicts the trend and the future Bitcoin prices using historical Bitcoin pricing data and sentiment analysis of relevant historical Reddit and Twitter posts.
 
  > Keywords: applied machine learning, Bitcoin, cryptocurrency, price prediction, RNN, sentiment analysis
 
@@ -79,7 +79,7 @@ Example 4 - Get tweets by several usernames:
 Example 5 - Get tweets by language:  
 `GetOldTweets3 --querysearch "bitcoin" --lang cn --maxtweets 10`  
 
-See [GetOldTweets3](https://pypi.org/project/GetOldTweets3/) for additional Twitter criteria.
+See [GetOldTweets3](https://pypi.org/project/GetOldTweets3/) for additional Twitter criteria, query examples, and documentation.
 
 ### Reddit
 ### Sentiment Analysis
@@ -117,7 +117,7 @@ We attempted to search for a better sentiment analyzer since TextBlob’s perfor
 
 ## Acknowledgments  
 
-We would like to express our gratitude to the AMLI instructor team that provided so much help and support on this project, as well as Sidnie and Liza who organized this great opportunity.
+We would like to express our gratitude to the AMLI instructor team that provided so much help and support on this project as well as Sidnie and Liza, our program mangagers who organized this great opportunity.
 
 ## References
 * [Predicting Stock Prices with Echo State Networks](https://towardsdatascience.com/predicting-stock-prices-with-echo-state-networks-f910809d23d4)
