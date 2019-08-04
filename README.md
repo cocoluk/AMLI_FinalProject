@@ -50,7 +50,7 @@ In the `bitcoin/data/bitcoin_data` folder, there are 39 files ended with `.csv`.
 - **Merge data into one file**
 Run `Merge_Data.ipynb` in `bitcoin/nb`, and it will generate a excel file called `bitcoin_merged.xlsx` in  `bitcoin/data`.
 
-- Optional
+- Optional: 
 If you are also interested in feeding the historical price of Litecoin or Ethereum to the model, you can run the corresponding code blocks in `Merge_Data.ipynb` and get `litecoin_data.csv` and `ethereum_data.csv` .
 
 ### Twitter
@@ -120,7 +120,7 @@ Open `Bitcoin_Price_Prediction.ipynb` in `model/nb` and follow the instructions 
 ### Echo State Network (ESN)
 ESN is a type of RNN, and it is well adapted for handling chaotic time series. It has a sparsely connected hidden layer (with typically 1% connectivity). The connectivity and weights of hidden [neurons](https://en.wikipedia.org/wiki/Artificial_neuron "Artificial neuron") are fixed and randomly assigned. The weights of output neurons can be learned so that the network can (re)produce specific temporal patterns. (Source: [WIkipedia](https://en.wikipedia.org/wiki/Echo_state_network))
 
-Open `Echo_State_Network.ipynb` in `model/nb` and follow the instructions to run the model.
+Use [Google Colaboratory](https://colab.research.google.com/) to open `Echo_State_Network.ipynb` in `model/nb` and follow the instructions to run the model.
 ## Results
 ### RNN model
 |Feature Set|Precision                        |Recall |Accuracy                        |
@@ -130,7 +130,7 @@ Open `Echo_State_Network.ipynb` in `model/nb` and follow the instructions to run
 |third          |7      |8          |9
 
 ### ESN model
-In the `Echo_State_Network.ipynb` notebook, we tried several different combinations of the parameters. Using the scaled Bitcoin price data, an optimal set of `reservoir = 500`, `sparsity = 0.2`, `radius = 1.5`, and `noise = 0.001` gives the F1 score around `0.65` and accuracy around 0.61.
+In the `Echo_State_Network.ipynb` notebook, we tried several different combinations of the parameters. Using the scaled Bitcoin price data, an optimal set of `reservoir = 500`, `sparsity = 0.2`, `radius = 1.5`, and `noise = 0.1` gives the F1 score around `0.65` and accuracy around 0.61.
 
 ## Future Steps
 ### More Data Scraping  
